@@ -1,9 +1,9 @@
 <section id="home">
-	<div class="main-container text-center">
+	<div class="main-container">
 		<div class="content-container">
-			<h5>So, you want to travel to</h5>
+			<h5 class="fs-500 text-light ff-sans-cond">So, you want to travel to</h5>
 			<h1 class="fs-900">Space</h1>
-			<p class="text">
+			<p class="text text-light fs-300">
 				Let’s face it; if you want to go to space, you might as well genuinely go to outer space and
 				not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly
 				out of this world experience!
@@ -28,14 +28,27 @@
 		padding-top: 10rem;
 		border: 1px solid green;
 		display: grid;
-		grid-template-rows: 1fr 1fr;
+		grid-template-rows: repeat(2, 1fr);
 		height: 100%;
 	}
 	.content-container {
+		width: 100%;
 		border: 1px solid red;
+		justify-self: center;
+		text-align: center;
 	}
 	.large-button-container {
 		border: 1px solid yellow;
-		align-self: flex-end;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		padding-bottom: 3rem;
+	}
+
+	.text {
+		max-width: 38ch;
+		margin: 0 auto;
+		line-height: 25px;
 	}
 </style>
