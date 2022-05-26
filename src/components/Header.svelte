@@ -11,18 +11,22 @@
 	<nav class:slide={isOpen}>
 		<ul>
 			<li>
-				<a href="/" on:click={slideNav} class="text-white"><span class="bold">00</span> Home</a>
+				<a href="/" on:click={slideNav} class="text-white fs-300 uppercase"
+					><span class="bold">00</span> Home</a
+				>
 			</li>
 			<li>
-				<a href="/crew" on:click={slideNav} class="text-white"><span class="bold">01</span> Crew</a>
+				<a href="/crew" on:click={slideNav} class="text-white fs-300 uppercase"
+					><span class="bold">01</span> Crew</a
+				>
 			</li>
 			<li>
-				<a href="/destination" on:click={slideNav} class="text-white"
+				<a href="/destination" on:click={slideNav} class="text-white fs-300 uppercase"
 					><span class="bold">02</span> Destination</a
 				>
 			</li>
 			<li>
-				<a href="/technology" on:click={slideNav} class="text-white"
+				<a href="/technology" on:click={slideNav} class="text-white fs-300 uppercase"
 					><span class="bold">03</span> Technology</a
 				>
 			</li>
@@ -48,26 +52,27 @@
 		display: flex;
 		justify-content: space-between;
 		position: fixed;
-		top: 1.5rem;
+		top: 0;
 		left: 0;
-		padding: 0 2rem;
+		padding: 3rem 2rem;
 	}
 	.logo {
 		align-self: center;
 		z-index: 999;
 		cursor: pointer;
 	}
-	/* nav {
+	nav {
 		width: 100vw;
-		height: 10vh;
+		height: calc(100vh + 2rem);
 		font-family: var(--ff-sans-cond);
 		font-size: var(--fs-300);
 		letter-spacing: 2.7px;
 		position: absolute;
+		top: 0;
 		transform: translateX(100%) translateY(-1.5rem);
 		transition: transform 0.3s ease-in-out;
 		z-index: 100;
-	} */
+	}
 	ul {
 		display: flex;
 		flex-direction: column;
@@ -99,29 +104,37 @@
 	@media screen and (min-width: 767px) {
 		.menu,
 		.bold {
-			display: none
+			display: none;
+		}
+
+		.header {
+			padding: 0 0 0 4rem;
 		}
 
 		nav {
 			background-color: var(--clr-grey);
+			width: auto;
+			height: auto;
+			position: static;
+			transform: translateX(0) translateY(0);
 		}
 
 		ul {
 			flex-direction: row;
+			margin-top: 0;
+			margin-left: 0;
+			padding: 0 5rem;
+			gap: 4rem;
 		}
 
-		
+		li {
+			padding: 5rem 0;
+			border-bottom: 2px solid transparent;
+			transition: all 0.2s ease-in-out;
+		}
 
-	/* 	nav {
-			width: 100vw;
-			height: 100vh;
-			font-family: var(--ff-sans-cond);
-			font-size: var(--fs-300);
-			letter-spacing: 2.7px;
-
-			transform: translateX(100%) translateY(-1.5rem);
-			transition: transform 0.3s ease-in-out;
-			z-index: 100;
-		} */
+		li:hover {
+			border-bottom: 3px solid #979797;
+		}
 	}
 </style>

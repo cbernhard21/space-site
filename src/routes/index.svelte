@@ -55,6 +55,18 @@
 		padding-top: 7rem;
 	}
 
+	.large-btn {
+		z-index: 1;
+		display: inline-grid;
+		place-items: center;
+		padding: 1px 2em;
+		border-radius: 50%;
+		aspect-ratio: 1;
+		text-decoration: none;
+		background-color: var(--clr-white);
+		color: var(--clr-dark);
+	}
+
 	.text {
 		max-width: 38ch;
 		margin: 0 auto;
