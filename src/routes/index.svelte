@@ -3,7 +3,7 @@
 		<div class="content-container">
 			<h5 class="fs-500 text-light ff-sans-cond">So, you want to travel to</h5>
 			<h1 class="fs-900">Space</h1>
-			<p class="text text-light fs-300">
+			<p class="text text-light fs-400">
 				Let’s face it; if you want to go to space, you might as well genuinely go to outer space and
 				not hover kind of on the edge of it. Well sit back, and relax because we’ll give you a truly
 				out of this world experience!
@@ -23,27 +23,36 @@
 		background-size: cover;
 		height: 100vh;
 	}
+	@media screen and (min-width: 767px) {
+		#home {
+			background-image: url('../assets/home/background-home-tablet.jpg');
+		}
+	}
+	@media screen and (min-width: 1250px) {
+		#home {
+			background-image: url('../assets/home/background-home-desktop.jpg');
+		}
+	}
 
 	.main-container {
 		padding-top: 10rem;
-		border: 1px solid green;
+		/* border: 1px solid green; */
 		display: grid;
 		grid-template-rows: repeat(2, 1fr);
 		height: 100%;
 	}
 	.content-container {
 		width: 100%;
-		border: 1px solid red;
+		/* border: 1px solid red; */
 		justify-self: center;
 		text-align: center;
 	}
 	.large-button-container {
-		border: 1px solid yellow;
-		display: flex;
-		flex-direction: column;
-		justify-content: flex-end;
-		align-items: center;
-		padding-bottom: 3rem;
+		/* border: 1px solid yellow; */
+		height: 100%;
+		text-align: center;
+		align-self: flex-end;
+		padding-top: 7rem;
 	}
 
 	.text {

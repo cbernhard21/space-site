@@ -33,7 +33,7 @@
 		<img
 			src="../assets/shared/icon-hamburger.svg"
 			alt="Burger Menu"
-			class="logo"
+			class="logo menu"
 			on:click={slideNav}
 		/>
 	{:else}
@@ -57,11 +57,9 @@
 		z-index: 999;
 		cursor: pointer;
 	}
-	nav {
-		/* background-color: rgba(0, 0, 0, .1); */
-		/* backdrop-filter: blur(25px); */
+	/* nav {
 		width: 100vw;
-		height: 100vh;
+		height: 10vh;
 		font-family: var(--ff-sans-cond);
 		font-size: var(--fs-300);
 		letter-spacing: 2.7px;
@@ -69,7 +67,7 @@
 		transform: translateX(100%) translateY(-1.5rem);
 		transition: transform 0.3s ease-in-out;
 		z-index: 100;
-	}
+	} */
 	ul {
 		display: flex;
 		flex-direction: column;
@@ -96,5 +94,34 @@
 		nav {
 			background-color: rgba(0, 0, 0, 0.9);
 		}
+	}
+
+	@media screen and (min-width: 767px) {
+		.menu,
+		.bold {
+			display: none
+		}
+
+		nav {
+			background-color: var(--clr-grey);
+		}
+
+		ul {
+			flex-direction: row;
+		}
+
+		
+
+	/* 	nav {
+			width: 100vw;
+			height: 100vh;
+			font-family: var(--ff-sans-cond);
+			font-size: var(--fs-300);
+			letter-spacing: 2.7px;
+
+			transform: translateX(100%) translateY(-1.5rem);
+			transition: transform 0.3s ease-in-out;
+			z-index: 100;
+		} */
 	}
 </style>
