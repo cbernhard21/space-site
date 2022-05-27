@@ -41,6 +41,7 @@
 		grid-template-rows: repeat(2, 1fr);
 		height: 100%;
 	}
+
 	.content-container {
 		width: 100%;
 		/* border: 1px solid red; */
@@ -71,5 +72,15 @@
 		max-width: 38ch;
 		margin: 0 auto;
 		line-height: 25px;
+	}
+
+
+	@media screen and (min-width: 767px) {
+		.main-container {
+			padding-top: 20rem;
+		}
+		.text {
+			max-width: 50ch;
+		}
 	}
 </style>

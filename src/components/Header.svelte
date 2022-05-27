@@ -1,4 +1,7 @@
 <script>
+
+	import { page } from '$app/stores';
+
 	let isOpen = false;
 	function slideNav() {
 		isOpen = !isOpen;
@@ -6,71 +9,45 @@
 
 
 
-	// let routes = [
-	// 	{
-	// 		route: 'home',
-	// 		path: '/'
-	// 	},
-	// 	{
-	// 		route: 'crew',
-	// 		path: '/crew'
-	// 	},
-	// 	{
-	// 		route: 'destination',
-	// 		path: '/destination'
-	// 	},
-	// 	{
-	// 		route: 'technology',
-	// 		path: '/technology'
-	// 	}
-	// ]
-	let current = 'home';
+	let routes = [
+		{
+			name: 'home',
+			href: '/',
+			id: '00'
+		},
+		{
+			name: 'crew',
+			href: '/crew',
+			id: '01'
+		},
+		{
+			name: 'destination',
+			href: '/destination',
+			id: '02'
+		},
+		{
+			name: 'technology',
+			href: '/technology',
+			id: '03'
+		}
+	]
 
 
-
-	function handleClick() {
-		
-		slideNav()
-	}
 </script>
 
 <div class="header">
 	<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo" />
-	<h2>{current}</h2>
+
 	<nav class:slide={isOpen}>
 		<ul>
-
-			<!-- {#each routes as route }
+			{#each routes as route }
 				<li><a 
-						href="{route.path}" 
-						on:click={slideNav} 
-						on:click="{() => current === route.route}"
-						class="text-white fs-300 uppercase {current === route.route ? 'active' : ''}"
-					>{route.route}</a></li>
-			{/each} -->
-
-			<li>
-				<a 
-					href="/" 
-					class="text-white fs-300 uppercase {current === 'home' ? 'active' : ''}"
-					on:click={slideNav} 
-					on:click="{() => current === 'home'}"
-				><span class="bold">00</span> Home</a>
-			</li>
-			<li>
-				<a 
-					href="/crew" 
-					class="text-white fs-300 uppercase {current === 'crew' ? 'active' : ''}"
-					on:click={slideNav}
-					on:click="{() => current === 'crew'}"
-				><span class="bold">01</span> Crew</a>
-			</li>
-			<li>
-				<a href="/destination" on:click={slideNav} class="text-white fs-300 uppercase"><span class="bold">02</span> Destination</a>
-			</li>
-			<li>
-				<a href="/technology" on:click={slideNav} class="text-white fs-300 uppercase"><span class="bold">03</span> Technology</a>
-			</li>
+						href="{route.href}" 
+						class:active={route.href === $page.url.pathname}
+						class="text-white fs-300 uppercase"
+						on:click={slideNav}
+					><span class="bold">{route.id}</span> {route.name}</a></li>
+			{/each}
 		</ul>
 	</nav>
 
@@ -189,7 +166,19 @@
 			display: none;
 		}
 		.active {
-			color: red;
+			border-bottom: 3px solid var(--clr-white);
+		}
+	}
+
+	@media screen and (min-width: 1250px){
+		.header {
+			top: 5rem;
+		}
+		.bold {
+			display: inline;
+		}
+		ul {
+			padding: 0 16.5rem 0 12.5rem;
 		}
 	}
 </style>
