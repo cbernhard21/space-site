@@ -1,13 +1,10 @@
 <script>
-
 	import { page } from '$app/stores';
 
 	let isOpen = false;
 	function slideNav() {
 		isOpen = !isOpen;
 	}
-
-
 
 	let routes = [
 		{
@@ -30,23 +27,23 @@
 			href: '/technology',
 			id: '03'
 		}
-	]
-
-
+	];
 </script>
 
 <div class="header">
-	<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo" />
-
+	<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo main-logo" />
+	<div class="line" />
 	<nav class:slide={isOpen}>
 		<ul>
-			{#each routes as route }
-				<li><a 
-						href="{route.href}" 
+			{#each routes as route}
+				<li>
+					<a
+						href={route.href}
 						class:active={route.href === $page.url.pathname}
 						class="text-white fs-300 uppercase"
-						on:click={slideNav}
-					><span class="bold">{route.id}</span> {route.name}</a></li>
+						on:click={slideNav}><span class="bold">{route.id}</span> {route.name}</a
+					>
+				</li>
 			{/each}
 		</ul>
 	</nav>
@@ -59,11 +56,19 @@
 			on:click={slideNav}
 		/>
 	{:else}
-		<img src="../assets/shared/icon-close.svg" alt="Burger Menu" class="logo hidden" on:click={slideNav} />
+		<img
+			src="../assets/shared/icon-close.svg"
+			alt="Burger Menu"
+			class="logo hidden"
+			on:click={slideNav}
+		/>
 	{/if}
 </div>
 
 <style>
+	.line {
+		display: hidden;
+	}
 	.header {
 		margin: 0 auto;
 		width: 100%;
@@ -119,6 +124,7 @@
 		}
 	}
 
+	/* MEDIUM SCREENS */
 	@media screen and (min-width: 767px) {
 		.menu,
 		.bold {
@@ -170,7 +176,8 @@
 		}
 	}
 
-	@media screen and (min-width: 1250px){
+	/* LARGE SCREENS */
+	@media screen and (min-width: 1250px) {
 		.header {
 			top: 5rem;
 		}
@@ -178,7 +185,30 @@
 			display: inline;
 		}
 		ul {
-			padding: 0 16.5rem 0 12.5rem;
+			padding: 0 16.5rem 0 18.5rem;
+		}
+		.line {
+			display: block;
+			position: absolute;
+			top: 5rem;
+			left: 15rem;
+			width: 33vw;
+			height: 1px;
+			background-color: var(--clr-dark-grey);
+			z-index: 9999;
+			flex-shrink: 1;
+		}
+	}
+
+	@media screen and (min-width: 1450px) {
+		.line {
+			width: 43vw;
+		}
+	}
+
+	@media screen and (min-width: 1800px) {
+		.line {
+			width: 50vw;
 		}
 	}
 </style>
