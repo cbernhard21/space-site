@@ -3,18 +3,67 @@
 	function slideNav() {
 		isOpen = !isOpen;
 	}
+
+
+
+	// let routes = [
+	// 	{
+	// 		route: 'home',
+	// 		path: '/'
+	// 	},
+	// 	{
+	// 		route: 'crew',
+	// 		path: '/crew'
+	// 	},
+	// 	{
+	// 		route: 'destination',
+	// 		path: '/destination'
+	// 	},
+	// 	{
+	// 		route: 'technology',
+	// 		path: '/technology'
+	// 	}
+	// ]
+	let current = 'home';
+
+
+
+	function handleClick() {
+		
+		slideNav()
+	}
 </script>
 
 <div class="header">
 	<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo" />
-
+	<h2>{current}</h2>
 	<nav class:slide={isOpen}>
 		<ul>
+
+			<!-- {#each routes as route }
+				<li><a 
+						href="{route.path}" 
+						on:click={slideNav} 
+						on:click="{() => current === route.route}"
+						class="text-white fs-300 uppercase {current === route.route ? 'active' : ''}"
+					>{route.route}</a></li>
+			{/each} -->
+
 			<li>
-				<a href="/" on:click={slideNav} class="text-white fs-300 uppercase"><span class="bold">00</span> Home</a>
+				<a 
+					href="/" 
+					class="text-white fs-300 uppercase {current === 'home' ? 'active' : ''}"
+					on:click={slideNav} 
+					on:click="{() => current === 'home'}"
+				><span class="bold">00</span> Home</a>
 			</li>
 			<li>
-				<a href="/crew" on:click={slideNav} class="text-white fs-300 uppercase"><span class="bold">01</span> Crew</a>
+				<a 
+					href="/crew" 
+					class="text-white fs-300 uppercase {current === 'crew' ? 'active' : ''}"
+					on:click={slideNav}
+					on:click="{() => current === 'crew'}"
+				><span class="bold">01</span> Crew</a>
 			</li>
 			<li>
 				<a href="/destination" on:click={slideNav} class="text-white fs-300 uppercase"><span class="bold">02</span> Destination</a>
@@ -33,7 +82,7 @@
 			on:click={slideNav}
 		/>
 	{:else}
-		<img src="../assets/shared/icon-close.svg" alt="Burger Menu" class="logo" on:click={slideNav} />
+		<img src="../assets/shared/icon-close.svg" alt="Burger Menu" class="logo hidden" on:click={slideNav} />
 	{/if}
 </div>
 
@@ -107,30 +156,40 @@
 			background-color: var(--clr-grey);
 			width: auto;
 			height: auto;
+			padding: 4.4rem 0;
 			position: static;
 			transform: translateX(0) translateY(0);
 			transition: none;
 		}
 
 		ul {
+			height: 100%;
+			position: relative;
 			flex-direction: row;
+			align-items: center;
 			margin-top: 0;
 			margin-left: 0;
-			padding: 0 5rem;
+			padding: 0rem 5rem;
 			gap: 4rem;
 		}
 
-		li {
-			padding: 5rem 0;
-			border-bottom: 2px solid transparent;
-			transition: all 0.2s ease-in-out;
+		a {
+			padding: 4rem 0;
+			border-bottom: 3px solid transparent;
+			transition: all 0.3s ease-in-out;
 		}
 
-		li:hover {
+		a:hover {
 			border-bottom: 3px solid #979797;
 		}
 		.slide {
-			transform: translateX(0) translateY(0);
+			transform: none;
+		}
+		.hidden {
+			display: none;
+		}
+		.active {
+			color: red;
 		}
 	}
 </style>
