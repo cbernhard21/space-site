@@ -190,7 +190,7 @@
 		.line {
 			display: block;
 			position: absolute;
-			top: 5rem;
+			top: 5.5rem;
 			left: 15rem;
 			width: 33vw;
 			height: 1px;

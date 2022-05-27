@@ -19,3 +19,9 @@
 <main>
 	<slot />
 </main>
+
+<style>
+	header {
+		position: relative;
+	}
+</style>
