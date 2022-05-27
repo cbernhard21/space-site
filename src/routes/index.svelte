@@ -34,25 +34,9 @@
 		}
 	}
 
-	.main-container {
-		padding-top: 10rem;
-		display: grid;
-		grid-template-rows: repeat(2, 1fr);
-		height: 100%;
-	}
 
-	/* LARGE SCREEN */
-	@media screen and (min-width: 1250px) {
-		.main-container {
-			/* margin: 0 16.5rem 0 15rem; */
-			margin: 0 auto;
-			max-width: 1200px;
-			/* border: 1px solid green; */
-			height: 100vh;
-			grid-template-rows: auto;
-			grid-template-columns: repeat(2, 1fr);
-		}
-	}
+
+
 
 	.content-container {
 		width: 100%;
@@ -92,9 +76,6 @@
 	}
 
 	@media screen and (min-width: 767px) {
-		.main-container {
-			padding-top: 20rem;
-		}
 		.text {
 			max-width: 50ch;
 		}

@@ -13,13 +13,13 @@
 			id: '00'
 		},
 		{
-			name: 'crew',
-			href: '/crew',
+			name: 'destination',
+			href: '/destination',
 			id: '01'
 		},
 		{
-			name: 'destination',
-			href: '/destination',
+			name: 'crew',
+			href: '/crew',
 			id: '02'
 		},
 		{

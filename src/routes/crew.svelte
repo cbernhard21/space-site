@@ -1,5 +1,7 @@
 <div id="crew">
-	<h1 class="fs-900">Crew</h1>
+	<div class="main-container">
+		<h1 class="fs-800">Crew</h1>
+	</div>
 </div>
 
 <style>
@@ -8,5 +10,15 @@
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
+	}
+	@media screen and (min-width: 767px) {
+		#crew {
+			background-image: url('../assets/crew/background-crew-tablet.jpg');
+		}
+	}
+	@media screen and (min-width: 1250px) {
+		#crew {
+			background-image: url('../assets/crew/background-crew-desktop.jpg');
+		}
 	}
 </style>
