@@ -68,23 +68,6 @@
 		padding-top: 7rem;
 	}
 
-	/* LARGE SCREEN */
-	@media screen and (min-width: 1250px) {
-		.content-container,
-		.large-button-container {
-			align-self: end;
-		}
-		.content-container {
-			text-align: left;
-			padding: 0 0 14rem 0;
-		}
-		.large-button-container {
-			padding: 0 0 14rem 0;
-			height: auto;
-			text-align: right;
-		}
-	}
-
 	.large-btn {
 		z-index: 1;
 		display: inline-grid;
@@ -114,6 +97,32 @@
 		}
 		.text {
 			max-width: 50ch;
+		}
+	}
+	/* LARGE SCREEN */
+	@media screen and (min-width: 1250px) {
+		.content-container,
+		.large-button-container {
+			align-self: end;
+		}
+		.content-container {
+			text-align: left;
+			padding: 0 0 14rem 0;
+		}
+		.large-button-container {
+			padding: 0 0 14rem 0;
+			height: auto;
+			text-align: right;
+		}
+		.content-container h5 {
+			margin-bottom: 3rem;
+		}
+		.content-container h1 {
+			margin-bottom: 5rem;
+		}
+		.text {
+			max-width: 45ch;
+			line-height: 1.8;
 		}
 	}
 </style>
