@@ -18,19 +18,19 @@
 
 <style>
 	#home {
-		background-image: url('../assets/home/background-home-mobile.jpg');
+		background-image: url('/assets/home/background-home-mobile.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
 		height: 100vh;
 	}
 	@media screen and (min-width: 767px) {
 		#home {
-			background-image: url('../assets/home/background-home-tablet.jpg');
+			background-image: url('/assets/home/background-home-tablet.jpg');
 		}
 	}
 	@media screen and (min-width: 1250px) {
 		#home {
-			background-image: url('../assets/home/background-home-desktop.jpg');
+			background-image: url('/assets/home/background-home-desktop.jpg');
 		}
 	}
 
