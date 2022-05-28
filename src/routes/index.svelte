@@ -11,7 +11,7 @@
 		</div>
 
 		<div class="large-button-container">
-			<a href="/" class="fs-600 uppercase large-btn">Explore</a>
+			<a href="/destination" class="fs-600 uppercase large-btn">Explore</a>
 		</div>
 	</div>
 </section>
@@ -33,10 +33,6 @@
 			background-image: url('/assets/home/background-home-desktop.jpg');
 		}
 	}
-
-
-
-
 
 	.content-container {
 		width: 100%;

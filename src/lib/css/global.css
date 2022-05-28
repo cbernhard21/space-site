@@ -168,6 +168,9 @@ h5 {
 .text-light {
 	color: var(--clr-light);
 }
+.text-dark-grey {
+	color: var(--clr-dark-grey)
+}
 
 /* FONT FAMILY  */
 .ff-serif {

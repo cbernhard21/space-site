@@ -31,9 +31,12 @@
 </script>
 
 <div class="header">
-	<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo main-logo" />
+	<a href="/">
+		<img src="../assets/shared/logo.svg" alt="Space Travel Logo" class="logo main-logo" />
+	</a>
+	
 	<div class="line" />
-	<nav class:slide={isOpen}>
+	<nav class:slide={isOpen} aria-label="primary">
 		<ul>
 			{#each routes as route}
 				<li>
