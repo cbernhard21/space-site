@@ -13,7 +13,7 @@
 			{#each destinations as destination }
 				{#if currentDestination === destination.name}
 				<div class="planet-img-container">
-					<img src="{destination.images.webp}" alt="{destination.name}" class="planet-img" />
+					<img src="{destination.images.png}" alt="{destination.name}" class="planet-img" />
 				</div>
 					
 				{/if}
@@ -39,18 +39,26 @@
 				{/if}
 			{/each}
 			<hr class="line-break">
-			<p class="uppercase ff-sans-cond text-light text-center subheading-2">Avg. Distance</p>
-			{#each destinations as destination }
-				{#if currentDestination === destination.name}
-					<p class="text-center uppercase distance subheading-1">{destination.distance}</p>
-				{/if}
-			{/each}
-			<p class="uppercase ff-sans-cond text-light text-center subheading-2">Est. Travel Time</p>
-			{#each destinations as destination }
-				{#if currentDestination === destination.name}
-					<p class="text-center uppercase subheading-1">{destination.travel}</p>
-				{/if}
-			{/each}
+			<div class="facts-container">
+				<div class="distance-container">
+					<p class="uppercase ff-sans-cond text-light subheading-2">Avg. Distance</p>
+					{#each destinations as destination }
+						{#if currentDestination === destination.name}
+							<p class="uppercase distance subheading-1">{destination.distance}</p>
+						{/if}
+					{/each}
+				</div>
+				<div class="time-container">
+					<p class="uppercase ff-sans-cond text-light subheading-2">Est. Travel Time</p>
+					{#each destinations as destination }
+						{#if currentDestination === destination.name}
+							<p class="uppercase subheading-1">{destination.travel}</p>
+						{/if}
+					{/each}
+				</div>
+
+			</div>
+			
 		</div>
 	</div>
 </div>
@@ -72,7 +80,10 @@
 			background-image: url('/assets/destination/background-destination-desktop.jpg');
 		}
 	}
-	.content{padding-bottom: 10rem;}
+	.content{
+		padding-bottom: 10rem;
+		text-align: center;
+	}
 	.planet-img {
 		width: 50%;
 		min-width: 17rem;
@@ -105,12 +116,7 @@
 		cursor: pointer;
 	}
 
-	h2 {
-		text-align: center;
-	}
-
 	.text {
-		text-align: center;
 		line-height: 1.7;
 		margin-bottom: 3.5rem;
 	}
@@ -131,20 +137,80 @@
 		margin-bottom: 1.5rem;
 	}
 
+	.facts-container {
+		display: flex;
+		flex-direction: column;
+
+	}
+
 	/* MEDIUM SCREENS */
 	@media screen and (min-width: 767px) {
 		.content-container {
 			padding-top: 13.5rem;
 		}
+		.content {
+			width: 75%;
+			margin: 0 auto;
+			padding-bottom: 0;
+		}
 		.heading {
 			text-align: left;
 		}
 		.destination-nav {
-			width: 35%;
+			width: 65%;
 		}
 		.planet-img {
 			max-width: 30rem;
 			margin: 0 auto;
+		}
+		.facts-container {
+			width: 100%;
+			flex-direction: row;
+			justify-content: space-evenly;
+		}
+
+	}
+
+	/* LARGE SCREENS */
+	@media screen and (min-width: 1250px) {
+		.content-container {
+			/* border: 2px solid red;
+			height: 90vh; */
+			overflow: hidden;
+			padding-top: 15rem;
+			grid-template-columns: repeat(2, 1fr);
+			grid-template-rows: auto;
+		}
+
+		.heading {
+			padding: 0 5rem;
+		}
+		.planet-img-container {
+			padding: 0 8rem;
+		}
+		.planet-img {
+			width: 100%;
+			max-width: 100%;
+		}
+		.content {
+			/* height: 100%; */
+			text-align: left;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+		}
+
+		.destination-nav {
+			margin-left: 0;
+		}
+
+		.text {
+			margin-bottom: 6rem;
+		}
+
+		.facts-container {
+			justify-content: flex-start;
+			gap: 8rem;
 		}
 	}
 

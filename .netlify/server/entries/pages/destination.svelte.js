@@ -66,35 +66,36 @@ const destinations = [
 ];
 var destination_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "#destination.svelte-1azj695{background-image:url('/assets/destination/background-destination-mobile.jpg');background-repeat:no-repeat;background-size:cover;height:100vh}@media screen and (min-width: 767px){#destination.svelte-1azj695{background-image:url('/assets/destination/background-destination-tablet.jpg')}}@media screen and (min-width: 1250px){#destination.svelte-1azj695{background-image:url('/assets/destination/background-destination-desktop.jpg')}}.content.svelte-1azj695{padding-bottom:10rem}.planet-img.svelte-1azj695{width:50%;min-width:17rem;margin:0 auto}.heading.svelte-1azj695{margin-bottom:3rem;text-align:center}nav.svelte-1azj695{margin-bottom:2.7rem}.destination-nav.svelte-1azj695{width:75%;margin:0 auto;display:flex;flex-direction:row;justify-content:space-between}li.svelte-1azj695{padding:1rem 0}h2.svelte-1azj695{text-align:center}.text.svelte-1azj695{text-align:center;line-height:1.7;margin-bottom:3.5rem}hr.svelte-1azj695{width:100%;height:2px;border:none;background-color:var(--clr-dark-grey);margin-bottom:3rem}.distance.svelte-1azj695{margin-bottom:4.5rem}.subheading-2.svelte-1azj695{margin-bottom:1.5rem}@media screen and (min-width: 767px){.content-container.svelte-1azj695{padding-top:13.5rem}.heading.svelte-1azj695{text-align:left}.destination-nav.svelte-1azj695{width:35%}.planet-img.svelte-1azj695{max-width:30rem;margin:0 auto}}",
+  code: "#destination.svelte-1d1fipn{background-image:url('/assets/destination/background-destination-mobile.jpg');background-repeat:no-repeat;background-size:cover;height:100vh}@media screen and (min-width: 767px){#destination.svelte-1d1fipn{background-image:url('/assets/destination/background-destination-tablet.jpg')}}@media screen and (min-width: 1250px){#destination.svelte-1d1fipn{background-image:url('/assets/destination/background-destination-desktop.jpg')}}.content.svelte-1d1fipn{padding-bottom:10rem}.planet-img.svelte-1d1fipn{width:50%;min-width:17rem;margin:0 auto}.top-padding.svelte-1d1fipn{padding-top:10rem}.heading.svelte-1d1fipn{margin-bottom:3rem;text-align:center}nav.svelte-1d1fipn{margin-bottom:2.7rem}.destination-nav.svelte-1d1fipn{width:75%;margin:0 auto;display:flex;flex-direction:row;justify-content:space-between}li.svelte-1d1fipn{padding:1rem 0;cursor:pointer}h2.svelte-1d1fipn{text-align:center}.text.svelte-1d1fipn{text-align:center;line-height:1.7;margin-bottom:3.5rem}hr.svelte-1d1fipn{width:100%;height:2px;border:none;background-color:var(--clr-dark-grey);margin-bottom:3rem}.distance.svelte-1d1fipn{margin-bottom:4.5rem}.subheading-2.svelte-1d1fipn{margin-bottom:1.5rem}@media screen and (min-width: 767px){.content-container.svelte-1d1fipn{padding-top:13.5rem}.heading.svelte-1d1fipn{text-align:left}.destination-nav.svelte-1d1fipn{width:35%}.planet-img.svelte-1d1fipn{max-width:30rem;margin:0 auto}}",
   map: null
 };
 const Destination = (0, import_index_e3bd9a9f.c)(($$result, $$props, $$bindings, slots) => {
   let currentDestination = "Moon";
   $$result.css.add(css);
-  return `<div id="${"destination"}" class="${"svelte-1azj695"}"><div class="${"content-container svelte-1azj695"}"><div class="${"heading svelte-1azj695"}">${(0, import_index_e3bd9a9f.v)(import_PageHeader_6296cf40.P, "PageHeader").$$render($$result, {
+  return `<div id="${"destination"}" class="${"svelte-1d1fipn"}"><div class="${"content-container top-padding svelte-1d1fipn"}"><div class="${"heading svelte-1d1fipn"}">${(0, import_index_e3bd9a9f.v)(import_PageHeader_6296cf40.P, "PageHeader").$$render($$result, {
     stepNumber: "01",
     step: "Pick Your Destination"
   }, {}, {})}
 			${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
-    return `${currentDestination === destination.name ? `<img${(0, import_index_e3bd9a9f.b)("src", destination.images.png, 0)}${(0, import_index_e3bd9a9f.b)("alt", destination.name, 0)} class="${"planet-img svelte-1azj695"}">` : ``}`;
+    return `${currentDestination === destination.name ? `<div class="${"planet-img-container"}"><img${(0, import_index_e3bd9a9f.b)("src", destination.images.webp, 0)}${(0, import_index_e3bd9a9f.b)("alt", destination.name, 0)} class="${"planet-img svelte-1d1fipn"}">
+				</div>` : ``}`;
   })}</div>
-		<div class="${"content svelte-1azj695"}"><nav aria-label="${"secondary"}" class="${"svelte-1azj695"}"><ul class="${"destination-nav svelte-1azj695"}">${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
+		<div class="${"content svelte-1d1fipn"}"><nav aria-label="${"secondary"}" class="${"svelte-1d1fipn"}"><ul class="${"destination-nav svelte-1d1fipn"}">${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
     return `<li class="${[
-      "fs-300 text-light uppercase svelte-1azj695",
+      "fs-300 text-light uppercase svelte-1d1fipn",
       currentDestination === destination.name ? "active" : ""
     ].join(" ").trim()}">${(0, import_index_e3bd9a9f.d)(destination.name)}</li>`;
   })}</ul></nav>
 			${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
-    return `${currentDestination === destination.name ? `<h2 class="${"fs-800 svelte-1azj695"}">${(0, import_index_e3bd9a9f.d)(destination.name)}</h2>
-					<p class="${"fs-400 text-light text svelte-1azj695"}">${(0, import_index_e3bd9a9f.d)(destination.description)}</p>` : ``}`;
+    return `${currentDestination === destination.name ? `<h2 class="${"fs-800 svelte-1d1fipn"}">${(0, import_index_e3bd9a9f.d)(destination.name)}</h2>
+					<p class="${"fs-400 text-light text svelte-1d1fipn"}">${(0, import_index_e3bd9a9f.d)(destination.description)}</p>` : ``}`;
   })}
-			<hr class="${"line-break svelte-1azj695"}">
-			<p class="${"uppercase ff-sans-cond text-light text-center subheading-2 svelte-1azj695"}">Avg. Distance</p>
+			<hr class="${"line-break svelte-1d1fipn"}">
+			<p class="${"uppercase ff-sans-cond text-light text-center subheading-2 svelte-1d1fipn"}">Avg. Distance</p>
 			${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
-    return `${currentDestination === destination.name ? `<p class="${"text-center uppercase distance subheading-1 svelte-1azj695"}">${(0, import_index_e3bd9a9f.d)(destination.distance)}</p>` : ``}`;
+    return `${currentDestination === destination.name ? `<p class="${"text-center uppercase distance subheading-1 svelte-1d1fipn"}">${(0, import_index_e3bd9a9f.d)(destination.distance)}</p>` : ``}`;
   })}
-			<p class="${"uppercase ff-sans-cond text-light text-center subheading-2 svelte-1azj695"}">Est. Travel Time</p>
+			<p class="${"uppercase ff-sans-cond text-light text-center subheading-2 svelte-1d1fipn"}">Est. Travel Time</p>
 			${(0, import_index_e3bd9a9f.e)(destinations, (destination) => {
     return `${currentDestination === destination.name ? `<p class="${"text-center uppercase subheading-1"}">${(0, import_index_e3bd9a9f.d)(destination.travel)}</p>` : ``}`;
   })}</div></div>
