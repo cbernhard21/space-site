@@ -213,11 +213,9 @@ h5 {
 /* LARGE SCREEN */
 @media screen and (min-width: 1250px) {
 	.main-container {
-		/* margin: 0 16.5rem 0 15rem; */
 		margin: 0 auto;
 		max-width: 70%;
-		/* border: 1px solid green; */
-		height: 100vh;
+		min-height: 100vh;
 		grid-template-rows: auto;
 		grid-template-columns: repeat(2, 1fr);
 	}

@@ -136,6 +136,7 @@
 		}
 
 		.header {
+			position: absolute;
 			padding: 0 0 0 4rem;
 		}
 
@@ -181,7 +182,9 @@
 	/* LARGE SCREENS */
 	@media screen and (min-width: 1250px) {
 		.header {
+
 			top: 5rem;
+			
 		}
 		.bold {
 			display: inline;

@@ -68,7 +68,7 @@
 		background-image: url('/assets/destination/background-destination-mobile.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
+		min-height: 100vh;
 	}
 	@media screen and (min-width: 767px) {
 		#destination {
@@ -177,7 +177,7 @@
 			/* border: 2px solid red;
 			height: 90vh; */
 			overflow: hidden;
-			padding-top: 15rem;
+			padding-top: 20rem;
 			grid-template-columns: repeat(2, 1fr);
 			grid-template-rows: auto;
 		}
@@ -193,11 +193,12 @@
 			max-width: 100%;
 		}
 		.content {
-			/* height: 100%; */
+			/* height: 90vh; */
 			text-align: left;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
+			padding-top: 10rem;
 		}
 
 		.destination-nav {

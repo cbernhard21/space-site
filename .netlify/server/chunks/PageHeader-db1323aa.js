@@ -23,7 +23,7 @@ module.exports = __toCommonJS(stdin_exports);
 var import_index_e3bd9a9f = require("./index-e3bd9a9f.js");
 var PageHeader_svelte_svelte_type_style_lang = "";
 const css = {
-  code: "h1.svelte-1c4nj7b{letter-spacing:2.7px;margin-bottom:3rem}",
+  code: "h1.svelte-sv05vm{letter-spacing:2.7px;margin-bottom:3rem}@media screen and (min-width: 1250px){h1.svelte-sv05vm{margin-bottom:10rem;letter-spacing:5px}.number.svelte-sv05vm{margin-right:2rem}}",
   map: null
 };
 const PageHeader = (0, import_index_e3bd9a9f.c)(($$result, $$props, $$bindings, slots) => {
@@ -34,5 +34,5 @@ const PageHeader = (0, import_index_e3bd9a9f.c)(($$result, $$props, $$bindings, 
   if ($$props.step === void 0 && $$bindings.step && step !== void 0)
     $$bindings.step(step);
   $$result.css.add(css);
-  return `<h1 class="${"fs-500 ff-sans-cond svelte-1c4nj7b"}"><span class="${"text-dark-grey"}">${(0, import_index_e3bd9a9f.d)(stepNumber)}</span> ${(0, import_index_e3bd9a9f.d)(step)}</h1>`;
+  return `<h1 class="${"fs-500 ff-sans-cond svelte-sv05vm"}"><span class="${"text-dark-grey number svelte-sv05vm"}">${(0, import_index_e3bd9a9f.d)(stepNumber)}</span> ${(0, import_index_e3bd9a9f.d)(step)}</h1>`;
 });

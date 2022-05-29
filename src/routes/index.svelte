@@ -18,10 +18,10 @@
 
 <style>
 	#home {
+		min-height: 100vh;
 		background-image: url('/assets/home/background-home-mobile.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
 	}
 	@media screen and (min-width: 767px) {
 		#home {

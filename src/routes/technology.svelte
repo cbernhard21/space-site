@@ -17,7 +17,7 @@
 		background-image: url('/assets/technology/background-technology-mobile.jpg');
 		background-repeat: no-repeat;
 		background-size: cover;
-		height: 100vh;
+		min-height: 100vh;
 	}
 	@media screen and (min-width: 767px) {
 		#technology {
