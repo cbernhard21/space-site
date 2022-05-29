@@ -1,6 +1,15 @@
+<script>
+	import {crew} from '$lib/data/data.json';
+	import PageHeader from "../components/PageHeader.svelte";
+
+</script>
+
+
 <div id="crew">
-	<div class="main-container">
-		<h1 class="fs-800">Crew</h1>
+	<div class="content-container">
+		<div class="header">
+			<PageHeader stepNumber={'02'} step={'Meet Your Crew'} />
+		</div>
 	</div>
 </div>
 

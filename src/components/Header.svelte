@@ -159,7 +159,7 @@
 			gap: 4rem;
 		}
 
-		a {
+		ul a {
 			padding: 4rem 0;
 			border-bottom: 3px solid transparent;
 			transition: all 0.3s ease-in-out;
@@ -174,9 +174,7 @@
 		.hidden {
 			display: none;
 		}
-		.active {
-			border-bottom: 3px solid var(--clr-white);
-		}
+
 	}
 
 	/* LARGE SCREENS */

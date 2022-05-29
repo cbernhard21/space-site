@@ -1,6 +1,14 @@
+<script>
+	import PageHeader from "../components/PageHeader.svelte";
+	import {technology} from '$lib/data/data.json';
+</script>
+
+
 <div id="technology">
-	<div class="main-container">
-		<h1 class="fs-800">technology</h1>
+	<div class="content-container">
+		<div class="header">
+			<PageHeader stepNumber={'03'} step={'Space Launch 101'} />
+		</div>
 	</div>
 </div>
 
