@@ -78,6 +78,7 @@
 
 	.heading {
 		margin-bottom: 3rem;
+		text-align: center;
 	}
 
 	nav {
@@ -120,6 +121,23 @@
 
 	.subheading-2 {
 		margin-bottom: 1.5rem;
+	}
+
+	/* MEDIUM SCREENS */
+	@media screen and (min-width: 767px) {
+		.content-container {
+			padding-top: 13.5rem;
+		}
+		.heading {
+			text-align: left;
+		}
+		.destination-nav {
+			width: 35%;
+		}
+		.planet-img {
+			max-width: 30rem;
+			margin: 0 auto;
+		}
 	}
 
 </style>
