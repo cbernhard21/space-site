@@ -7,12 +7,15 @@
 </script>
 
 <div id="destination">
-	<div class="content-container">
+	<div class="content-container top-padding">
 		<div class="heading">
 			<PageHeader stepNumber={'01'} step={'Pick Your Destination'}/>
 			{#each destinations as destination }
 				{#if currentDestination === destination.name}
-					<img src="{destination.images.png}" alt="{destination.name}" class="planet-img" />
+				<div class="planet-img-container">
+					<img src="{destination.images.webp}" alt="{destination.name}" class="planet-img" />
+				</div>
+					
 				{/if}
 			{/each}
 			
@@ -76,6 +79,10 @@
 		margin: 0 auto;
 	}
 
+	.top-padding {
+		padding-top: 10rem;
+	}
+
 	.heading {
 		margin-bottom: 3rem;
 		text-align: center;
@@ -95,6 +102,7 @@
 
 	li {
 		padding: 1rem 0;
+		cursor: pointer;
 	}
 
 	h2 {

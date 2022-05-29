@@ -1,6 +1,6 @@
 <section id="home">
 	<div class="main-container">
-		<div class="content-container">
+		<div class="content-container top-padding">
 			<h5 class="fs-500 text-light ff-sans-cond">So, you want to travel to</h5>
 			<h1 class="fs-900">Space</h1>
 			<p class="text text-light fs-400">
@@ -36,12 +36,14 @@
 
 	.content-container {
 		width: 100%;
-		/* border: 1px solid red; */
 		justify-self: center;
 		text-align: center;
 	}
+
+	.top-padding {
+		padding-top: 2rem;
+	}
 	.large-button-container {
-		/* border: 1px solid yellow; */
 		height: 100%;
 		text-align: center;
 		align-self: flex-end;

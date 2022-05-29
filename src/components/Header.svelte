@@ -44,8 +44,8 @@
 						href={route.href}
 						class:active={route.href === $page.url.pathname}
 						class="text-white fs-300 uppercase"
-						on:click={slideNav}><span class="bold">{route.id}</span> {route.name}</a
-					>
+						on:click={slideNav}><span class="bold">{route.id}</span> {route.name}
+					</a>
 				</li>
 			{/each}
 		</ul>
@@ -77,6 +77,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: space-between;
+		align-items: center;
 		position: fixed;
 		top: 0;
 		left: 0;

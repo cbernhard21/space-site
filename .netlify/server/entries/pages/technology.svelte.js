@@ -21,6 +21,7 @@ __export(stdin_exports, {
 });
 module.exports = __toCommonJS(stdin_exports);
 var import_index_e3bd9a9f = require("../../chunks/index-e3bd9a9f.js");
+var import_PageHeader_6296cf40 = require("../../chunks/PageHeader-6296cf40.js");
 var technology_svelte_svelte_type_style_lang = "";
 const css = {
   code: "#technology.svelte-1ljcwej{background-image:url('/assets/technology/background-technology-mobile.jpg');background-repeat:no-repeat;background-size:cover;height:100vh}@media screen and (min-width: 767px){#technology.svelte-1ljcwej{background-image:url('/assets/technology/background-technology-tablet.jpg')}}@media screen and (min-width: 1250px){#technology.svelte-1ljcwej{background-image:url('/assets/technology/background-technology-desktop.jpg')}}",
@@ -28,6 +29,9 @@ const css = {
 };
 const Technology = (0, import_index_e3bd9a9f.c)(($$result, $$props, $$bindings, slots) => {
   $$result.css.add(css);
-  return `<div id="${"technology"}" class="${"svelte-1ljcwej"}"><div class="${"main-container"}"><h1 class="${"fs-800"}">technology</h1></div>
+  return `<div id="${"technology"}" class="${"svelte-1ljcwej"}"><div class="${"content-container"}"><div class="${"header"}">${(0, import_index_e3bd9a9f.v)(import_PageHeader_6296cf40.P, "PageHeader").$$render($$result, {
+    stepNumber: "03",
+    step: "Space Launch 101"
+  }, {}, {})}</div></div>
 </div>`;
 });
