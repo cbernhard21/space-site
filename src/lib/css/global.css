@@ -6,6 +6,7 @@
 	--clr-dark: #0b0d17;
 	--clr-grey: rgba(255, 255, 255, 0.034);
 	--clr-dark-grey: #383B4B;
+	--clr-light-grey: #979797;
 
 	/* font-sizes */
 	--fs-900: 15rem;
@@ -169,7 +170,11 @@ h5 {
 	color: var(--clr-light);
 }
 .text-dark-grey {
-	color: var(--clr-dark-grey)
+	color: var(--clr-dark-grey);
+}
+
+.text-light-grey {
+	color: var(--clr-light-grey);
 }
 
 /* FONT FAMILY  */
@@ -201,6 +206,10 @@ h5 {
 .active {
 	color: var(--clr-white);
 	border-bottom: 3px solid var(--clr-white);
+}
+
+.top-padding {
+	padding-top: 10rem;
 }
 
 /* MEDIUM SCREENS */

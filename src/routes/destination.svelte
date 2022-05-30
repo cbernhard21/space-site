@@ -38,7 +38,9 @@
 					<p class="fs-400 text-light text">{destination.description}</p>
 				{/if}
 			{/each}
+
 			<hr class="line-break">
+			
 			<div class="facts-container">
 				<div class="distance-container">
 					<p class="uppercase ff-sans-cond text-light subheading-2">Avg. Distance</p>
@@ -88,10 +90,6 @@
 		width: 50%;
 		min-width: 17rem;
 		margin: 0 auto;
-	}
-
-	.top-padding {
-		padding-top: 10rem;
 	}
 
 	.heading {
