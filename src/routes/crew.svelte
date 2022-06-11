@@ -5,9 +5,6 @@
 	crew.forEach((member, i) => {
 		member.id = i + 1
 	})
-
-	console.log(crew);
-
 	let currentMember = 'Douglas Hurley';
 
 </script>
@@ -31,7 +28,7 @@
 				<nav aria-label="secondary">
 					{#each crew as member }
 						<div 
-							class="circle text-dark-grey"
+							class="circle bg-dark-grey"
 							class:crew-active={currentMember === member.name}
 							on:click={() => currentMember = member.name}
 						><span class="hidden">{member.id}</span></div>
@@ -41,9 +38,9 @@
 				<article class="crew-details">
 					{#each crew as member }
 						{#if currentMember === member.name}
-							<h2 class="crew-role">{member.role}</h2>
-							<h3 class="crew-name">{member.name}</h3>
-							<p class="crew-bio">{member.bio}</p>
+							<h2 class="crew-role fs-600 text-white-half">{member.role}</h2>
+							<h3 class="crew-name fs-700">{member.name}</h3>
+							<p class="crew-bio fs-400 text-light">{member.bio}</p>
 						{/if}
 					{/each}
 				</article>
@@ -89,7 +86,7 @@
 
 	nav {
 		width: 50%;
-		margin: 0 auto;
+		margin: 0 auto 3rem;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-evenly;
@@ -97,13 +94,24 @@
 
 	.circle {
 		border-radius: 50%;
-		background-color: var(--clr-grey);
 		width: 10px;
 		height: 10px;
 	}
 
 	.crew-active {
 		background-color: var(--clr-white);
+	}
+
+	.crew-role {
+		margin-bottom: 1rem;
+	}
+
+	.crew-name {
+		margin-bottom: 1.5rem;
+	}
+
+	.crew-bio {
+		line-height: 1.5;
 	}
 
 	.hidden {
