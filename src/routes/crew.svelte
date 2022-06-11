@@ -21,30 +21,31 @@
 				</div>
 				{/if}
 			{/each}
-
 			<hr class="line-break" />
+		</div>
 
-			<div class="crew-content">
-				<nav aria-label="secondary">
-					{#each crew as member }
-						<div 
-							class="circle bg-dark-grey"
-							class:crew-active={currentMember === member.name}
-							on:click={() => currentMember = member.name}
-						><span class="hidden">{member.id}</span></div>
-					{/each}
-				</nav>
+		
 
-				<article class="crew-details">
-					{#each crew as member }
-						{#if currentMember === member.name}
-							<h2 class="crew-role fs-600 text-white-half">{member.role}</h2>
-							<h3 class="crew-name fs-700">{member.name}</h3>
-							<p class="crew-bio fs-400 text-light">{member.bio}</p>
-						{/if}
-					{/each}
-				</article>
-			</div>
+		<div class="crew-content">
+			<nav aria-label="secondary">
+				{#each crew as member }
+					<div 
+						class="circle bg-dark-grey"
+						class:crew-active={currentMember === member.name}
+						on:click={() => currentMember = member.name}
+					><span class="hidden">{member.id}</span></div>
+				{/each}
+			</nav>
+
+			<article class="crew-details">
+				{#each crew as member }
+					{#if currentMember === member.name}
+						<h2 class="crew-role fs-600 text-white-half">{member.role}</h2>
+						<h3 class="crew-name fs-700">{member.name}</h3>
+						<p class="crew-bio fs-400 text-light">{member.bio}</p>
+					{/if}
+				{/each}
+			</article>
 		</div>
 	</div>
 </div>
@@ -100,18 +101,22 @@
 
 	.crew-active {
 		background-color: var(--clr-white);
+
 	}
 
 	.crew-role {
 		margin-bottom: 1rem;
+		text-align: center;
 	}
 
 	.crew-name {
 		margin-bottom: 1.5rem;
+		text-align: center;
 	}
 
 	.crew-bio {
 		line-height: 1.5;
+		text-align: center;
 	}
 
 	.hidden {
